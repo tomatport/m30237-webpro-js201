@@ -13,20 +13,25 @@
 'use strict';
 
 function id() {
-  // e.g. return "UP654321";
+  return "up2194485";
 }
 
 function fn() {
-  return 'Replace This With Your First Name';
+  return "Thomas"
 }
 
 function sn() {
-  return 'Replace This With Your Surname';
+  return "Robinson";
 }
 
-function example() {
-  // replace this example with
-  // your first function then
-  // add more below as necessary.
+function add(a, b) {
+  return a + b;
+}
 
+function subtract(a, b) {
+  return a - b;
+}
+
+function checkObject(obj) {
+  obj["checked"] = true;
 }
