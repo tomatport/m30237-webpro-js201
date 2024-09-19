@@ -13,15 +13,15 @@
 'use strict';
 
 function id() {
-  return "up2194485";
+  return 'up2194485';
 }
 
 function fn() {
-  return "Thomas"
+  return 'Thomas';
 }
 
 function sn() {
-  return "Robinson";
+  return 'Robinson';
 }
 
 function add(a, b) {
@@ -33,12 +33,12 @@ function subtract(a, b) {
 }
 
 function checkObject(obj) {
-  obj["checked"] = true;
+  obj.checked = true;
 }
 
 function checkObjectInside(obj) {
-  if ("data" in obj) {
-    obj["data"]["checked"] = true;
+  if ('data' in obj) {
+    obj.data.checked = true;
   }
 }
 
@@ -81,13 +81,13 @@ function addToAll(arr, n) {
   return arr;
 }
 
-let remembered = undefined;
+let remembered;
 function rememberThis(keepsake) {
   remembered = keepsake;
 }
 
 function nArray(n) {
-  let arr = [];
+  const arr = [];
 
   for (let i = 0; i < n; i++) {
     arr[i] = i + 1;
@@ -103,7 +103,7 @@ function addAllOpt(arr) {
 }
 
 function divisors(arr, div) {
-  let divisable = [];
+  const divisable = [];
 
   arr.forEach(n => {
     if (n % div === 0) divisable.push(n);
@@ -113,7 +113,7 @@ function divisors(arr, div) {
 }
 
 function multiples(n, m) {
-  let arr = [];
+  const arr = [];
 
   // similar to nArray!
   for (let i = 0; i < n; i++) {
