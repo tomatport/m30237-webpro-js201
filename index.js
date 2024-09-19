@@ -43,7 +43,7 @@ function checkObjectInside(obj) {
 }
 
 function arraySet(arr, i, n) {
-  if(arr[i]) arr[i] = n;
+  if (arr[i]) arr[i] = n;
 }
 
 function addAll(arr) {
@@ -59,23 +59,23 @@ function larger(a, b) {
 function largest(arr) {
   let max; // we can't set this to 0, since we might have all negative #s
   arr.forEach(num => {
-    if(num > max || !max) max = num;
+    if (num > max || !max) max = num;
   });
   return max ? max : null;
 }
 
-function compare(a, b) {  
-  if(a.length !== b.length) return false;
+function compare(a, b) {
+  if (a.length !== b.length) return false;
 
-  for(const i in a) {
-    if(a[i] !== b[i]) return false;
+  for (const i in a) {
+    if (a[i] !== b[i]) return false;
   }
 
   return true;
 }
 
 function addToAll(arr, n) {
-  for(const i in arr) {
+  for (const i in arr) {
     arr[i] += n;
   }
   return arr;
@@ -97,7 +97,7 @@ function nArray(n) {
 }
 
 function addAllOpt(arr) {
-  if(!arr || arr.length === 0) return 0;
+  if (!arr || arr.length === 0) return 0;
 
   return addAll(arr);
 }
@@ -106,7 +106,7 @@ function divisors(arr, div) {
   let divisable = [];
 
   arr.forEach(n => {
-    if(n % div === 0) divisable.push(n);
+    if (n % div === 0) divisable.push(n);
   });
 
   return divisable;
