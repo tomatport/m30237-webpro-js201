@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 QUnit.config.reorder = false;
 const { test } = QUnit;
 
@@ -116,11 +118,11 @@ test(
     checkObject(y);
     assert.deepEqual(
       y, {
-        a: 4,
-        b: 5,
-        c: [1, 3, 5],
-        checked: true,
-      },
+      a: 4,
+      b: 5,
+      c: [1, 3, 5],
+      checked: true,
+    },
     );
   },
 );
@@ -150,12 +152,12 @@ test(
     checkObjectInside(y);
     assert.deepEqual(
       y, {
-        time: 12345,
-        data: {
-          name: 'Jack',
-          checked: true,
-        },
+      time: 12345,
+      data: {
+        name: 'Jack',
+        checked: true,
       },
+    },
     );
   },
 );
@@ -206,8 +208,8 @@ test(
     arraySet(x, 1.3, 'a');
     assert.deepEqual(
       [x, x[1.3]], [
-        [1, 2, 3], undefined,
-      ],
+      [1, 2, 3], undefined,
+    ],
       'arraySet should do nothing if the index is not an integer number',
     );
   },
@@ -315,7 +317,7 @@ test('Create a function called `largest` that accepts an array `arr` of numbers 
       const candidate = Object.freeze([1, 2, 22, 3]);
       largest(candidate)
     } catch (error) {
-      assert.ok( false, "You must not alter the candidate array at all.  In this test the array is frozen so your code will crash out if you do anything other than read from it." );
+      assert.ok(false, "You must not alter the candidate array at all.  In this test the array is frozen so your code will crash out if you do anything other than read from it.");
     }
 
   },
@@ -364,7 +366,7 @@ test(
     );
 
     assert.notOk(
-      compare([], [1,2,3]),
+      compare([], [1, 2, 3]),
       "An empty array is not the same as a filled array"
     );
 
@@ -377,7 +379,7 @@ test(
   function (assert) {
     if (!assert.functionExists('addToAll', ['arr', 'n'])) return;
 
-    const numbers = [1,2,3];
+    const numbers = [1, 2, 3];
     const numbersAfter = addToAll(numbers, 1);
     assert.strictEqual(
       numbers,
