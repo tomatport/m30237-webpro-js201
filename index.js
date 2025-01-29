@@ -76,7 +76,7 @@ function compare(a, b) {
 }
 
 function addToAll(arr, n) {
-  for (let i; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     arr[i] += n;
   }
   return arr;
