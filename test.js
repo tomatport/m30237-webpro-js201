@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 QUnit.config.reorder = false;
 const { test } = QUnit;
 
