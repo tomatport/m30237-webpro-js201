@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /*
  * This is index.js
  *
@@ -48,7 +49,7 @@ function arraySet(arr, i, n) {
 
 function addAll(arr) {
   let sum = 0;
-  arr.forEach(num => sum += num);
+  arr.forEach(num => { sum += num; });
   return sum;
 }
 
@@ -61,13 +62,13 @@ function largest(arr) {
   arr.forEach(num => {
     if (num > max || !max) max = num;
   });
-  return max ? max : null;
+  return max || null; // didn't know about using || here - same as max ? max : null
 }
 
 function compare(a, b) {
   if (a.length !== b.length) return false;
 
-  for (const i in a) {
+  for (let i = 0; i < a.length; i++) { // not allowed to use for...in
     if (a[i] !== b[i]) return false;
   }
 
@@ -75,7 +76,7 @@ function compare(a, b) {
 }
 
 function addToAll(arr, n) {
-  for (const i in arr) {
+  for (let i; i < arr.length; i++) {
     arr[i] += n;
   }
   return arr;
