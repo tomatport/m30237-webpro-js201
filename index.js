@@ -13,50 +13,61 @@
 
 'use strict';
 
+// Return student ID number
 function id() {
   return 'up2194485';
 }
 
+// Return first name
 function fn() {
   return 'Thomas';
 }
 
+// Return surname
 function sn() {
   return 'Robinson';
 }
 
+// Sum two parameters
 function add(a, b) {
   return a + b;
 }
 
+// Subtract two parameters
 function subtract(a, b) {
   return a - b;
 }
 
+// Set the 'checked' property of a given object
 function checkObject(obj) {
   obj.checked = true;
 }
 
+// Set the 'checked' property of a given object's 'data' property, if it exists
 function checkObjectInside(obj) {
   if ('data' in obj) {
     obj.data.checked = true;
   }
 }
 
+// Set the value of arr index i to n
 function arraySet(arr, i, n) {
   if (arr[i]) arr[i] = n;
 }
 
+// Sum an array of numbers
 function addAll(arr) {
   let sum = 0;
   arr.forEach(num => { sum += num; });
   return sum;
 }
 
+// Return whichever number is larger
 function larger(a, b) {
   return (a > b) ? a : b;
 }
 
+// Return the largest number in an array
 function largest(arr) {
   let max; // we can't set this to 0, since we might have all negative #s
   arr.forEach(num => {
@@ -65,6 +76,8 @@ function largest(arr) {
   return max || null; // didn't know about using || here - same as max ? max : null
 }
 
+// Check if two arrays are identical
+// Returns true if they are, false if they are not
 function compare(a, b) {
   if (a.length !== b.length) return false;
 
@@ -75,6 +88,7 @@ function compare(a, b) {
   return true;
 }
 
+// Returns an array with all elements incremented by n
 function addToAll(arr, n) {
   for (let i = 0; i < arr.length; i++) {
     arr[i] += n;
@@ -82,11 +96,13 @@ function addToAll(arr, n) {
   return arr;
 }
 
+// Remember a value for later
 let remembered;
 function rememberThis(keepsake) {
   remembered = keepsake;
 }
 
+// Make an array of n numbers, from 1 to n
 function nArray(n) {
   const arr = [];
 
@@ -97,12 +113,15 @@ function nArray(n) {
   return arr;
 }
 
+// Return the sum of all numbers in an array
+// If array doesn't exist or is empty, return 0
 function addAllOpt(arr) {
   if (!arr || arr.length === 0) return 0;
 
   return addAll(arr);
 }
 
+// Returns numbers in array that are divisible by a given number
 function divisors(arr, div) {
   const divisable = [];
 
@@ -113,6 +132,7 @@ function divisors(arr, div) {
   return divisable;
 }
 
+// Create an array of n numbers, from 1*m to n*m
 function multiples(n, m) {
   const arr = [];
 
