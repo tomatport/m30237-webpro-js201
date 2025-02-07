@@ -64,16 +64,14 @@ function addAll(arr) {
 
 // 11. Return whichever number is larger
 function larger(a, b) {
-  return (a > b) ? a : b;
+  Math.max(a, b);
 }
 
-// 12. Return the largest number in an array
+// 12. Return the largest number in an array, "null" otherwise
 function largest(arr) {
-  let max; // we can't set this to 0, since we might have all negative #s
-  arr.forEach(num => {
-    if (num > max || !max) max = num;
-  });
-  return max || null; // didn't know about using || here - same as max ? max : null
+  return Math.max(...arr) === -Infinity
+    ? null
+    : Math.max(...arr);
 }
 
 // 13. Check if two arrays are identical
