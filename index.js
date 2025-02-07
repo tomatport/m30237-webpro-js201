@@ -64,7 +64,7 @@ function addAll(arr) {
 
 // 11. Return whichever number is larger
 function larger(a, b) {
-  Math.max(a, b);
+  return Math.max(a, b);
 }
 
 // 12. Return the largest number in an array, "null" otherwise
